@@ -21,7 +21,8 @@ r       = floor(support/2);  % the radius
 fprintf('Start simple example...');
 choosen_im = shifted_projections(:,:,7);
 tic
-[est_shifts, cIm] = FastCenterPyramid(choosen_im, PSWF, weight_vec);
+[est_shifts, cIm] = CenterPyramid(choosen_im, PSWF, weight_vec);
+%[est_shifts, cIm] = FastCenterPyramid(choosen_im, PSWF, weight_vec);
 tt = toc();
 
 % the result
@@ -29,7 +30,7 @@ pn = Center_Of_Mass(cIm);
 figure;
 imagesc(choosen_im); title('Original image');
 figure; 
-imagesc(cIm); title('The EPIC output, with CoM marked');
+imagesc(cIm); title('The output, with CoM marked');
 hold on; plot(pn(1),pn(2),'bx','LineWidth',10,'MarkerSize',10);
 fprintf('done in about %f seconds \n', tt);
 
