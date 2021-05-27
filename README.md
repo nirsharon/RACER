@@ -6,3 +6,5 @@ Supplemntary code for the paper:
 by A. Heimowitz, N. Sharon, and A. Singer
 
 After applying add_path, Run simple_example/run_example.
+
+If you are equipped with GPU, please see our GPU-compatible version in https://github.com/ayeletheimowitz/noisy_image_centering
